@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: Arial;
+}
+
+h1 {
+  background-color: #0d2a4a;
+  color: white;
+  padding: 15px;
+}
+
+/* Choices */
+.choices {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.choice {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.choice img {
+  height: 80px;
+}
+
+/* Colors */
+#rock { background: #e77c93; }
+#paper { background: #b38ad8; }
+#scissors { background: #7fa6e6; }
+
+/* Hover & click */
+.choice:hover {
+  transform: scale(1.1);
+}
+
+.choice:active {
+  transform: scale(0.9);
+}
+
+/* Highlight */
+.win {
+  box-shadow: 0 0 25px #00ff88;
+}
+
+.lose {
+  box-shadow: 0 0 25px #ff4d4d;
+}
+
+.draw {
+  box-shadow: 0 0 25px #999;
+}
+
+/* Score */
+.score-board {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 40px;
+}
+
+.score p:first-child {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/* Message */
+.msg-container {
+  margin-top: 20px;
+}
+
+#msg {
+  background: #0d2a4a;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+/* Comp choice */
+#comp-choice {
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+/* Reset */
+#reset-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #0d2a4a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#reset-btn:hover {
+  background: #123a66;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .choices {
+    flex-direction: column;
+  }
+
+  .choice {
+    height: 100px;
+    width: 100px;
+  }
+
+  .choice img {
+    height: 60px;
+  }
+}
